@@ -1,0 +1,9 @@
+----------------------------
+Ansible template for Loop Example
+This is the 0 the Variable
+Hello world
+This is the 1 the Variable
+Hello world
+This is the 2 the Variable
+Hello world
+hello again
