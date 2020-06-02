@@ -1,0 +1,74 @@
+  172  apt-add-repository ppa:ansible/ansible
+  174  apt-get install -y ansible
+  175  vim /etc/ansible/hosts 
+  176  service ansible restart
+  182  ansible -m ping webservers
+  183  ansible -m ping 192.168.56.101
+  184  ansible -m command -a "uptime" webservers
+  185  ansible-doc -l
+  191  ansible-doc ping
+  193  ansible -m user -a "name=john password=john" webservers
+  195  ansible -m apt -a "name=httpd state=present" webservers
+  196  apt-get list | grep ansible
+  197  apt list --installed | grep ansible
+  199  ansible -m apt -a "name=http* state=present" webservers
+  200  ansible -m apt -a "name=nginx state=present" webservers
+  201  ansible -m apt -a "name=nginx* state=present" webservers
+  202  ansible -m apt -a "name=apache2 state=present" webservers
+  203  ansible -m service -a "name=apache2 state=started" webservers
+  205  ansible -m service -a "name=apache2 state=started" webservers
+  218  ansible webserver -m copy -a "src=/tmp/test1.txt dest=/tmp"
+  219  ansible webserver -m copy -a "src=/tmp/test1.txt dest=/tmp/test1.txt"
+  220  ansible webservers -m copy -a "src=/tmp/test1.txt dest=/tmp/test1.txt"
+  221  ansible webservers -m copy -a "src=/tmp/test2.txt dest=/tmp/"
+  223  ansible webserver -m git -a "repo=git@github.com:deepedureka/FirstTest.git dest=/tmp/gitrepo"
+  224  ansible webservers -m git -a "repo=git@github.com:deepedureka/FirstTest.git dest=/tmp/gitrepo"
+  225  ansible webservers -m git -a "repo=https://github.com/deepedureka/edurekadevops dest=/tmp/gitrepo"
+  227  ansible webserver -m setup
+  228  ansible webservers -m setup
+  229  ansible webservers -m setup -a "ansible_users"
+  230  ansible webservers -m setup -a "ansible_user"
+  231  ansible webservers -m setup -a "filter=ansible_user"
+  243  ansible-playbook playbook1.yml 
+  244  ansible-playbook playbook1.yml --syntax-check
+  247  ansible-playbook playbook1.yml --syntax-check
+  249  ansible-playbook playbook1.yml --syntax-check
+  250  ansible-playbook playbook1.yml --list-hosts
+  252  ansible-playbook playbook1.yml
+  258  ansible-playbook playbook1.yml
+  268  ansible-playbook playbook2.yml --syntax-check
+  269  ansible-playbook playbook2.yml
+  273  ansible-playbook playbook3.yml --syntax-check
+  283  ansible-playbook playbook3.yml 
+  285  ansible-playbook playbook3.yml
+  288  ansible-playbook playbook3.yml --syntax-check
+  290  ansible-playbook playbook3.yml --syntax-check
+  291  ansible-playbook playbook3.yml 
+  294  ansible-playbook playbook4.yml --syntax-check
+  296  cp /var/www/html/index.html /etc/ansible/
+  298  cd /etc/ansible/
+  302  ansible-playbook playbook4.yml 
+  304  ansible-playbook playbook4.yml
+  310  cd /etc/ansible/
+  335  cp /etc/ansible/sample.war /etc/ansible/roles/tomcat/files/
+  340  cd /etc/ansible/roles/
+  345  ansible-playbook /playbooks/site.yml --syntax-check
+  355  ansible-playbook /playbooks/site.yml --syntax-check
+  357  ansible-playbook site.yml 
+  359  cd /etc/ansible/
+  396  ansible-playbook /playbooks/site.yml
+  398  ansible-playbook /playbooks/site.yml
+  400  ansible-galaxy install --roles-path /etc/ansible/roles/ geerlingguy.jenkins
+  402  ansible-playbook /playbooks/site.yml --syntax-check
+  403  ansible-playbook /playbooks/site.yml
+  404  ansible-playbook /playbooks/site.retry
+  407  ansible-playbook /playbooks/site.yml
+  416  history | grep ansible
+  417  cd /etc/ansible/
+  421  history | grep ansible >> ansibleCommand.txt
+  425  more ansibleCommand.txt 
+  435  cat ansibleCommand.txt 
+  632  history | grep ansible
+  650  history | grep ansible
+  651  172  apt-add-repository ppa:ansible/ansible
+  652  history | grep ansible > repo/Automation_extra/ansible_command.txt

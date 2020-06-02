@@ -1,0 +1,15 @@
+---
+- hosts: webservers
+  become: true
+  become_user: root
+  tasks:
+  - name: Installing nginx package
+    apt: name=nginx state=latest
+  - name: start the nginx service
+    service: name=nginx state=started
+  - name: copying sample.war file
+    copy: src=/tmp/sample.war dest=/usr/share/nginx/html
+    notify: restart nginx
+  handlers:
+  - name: restart nginx
+    service: name=nginx state=restarted
