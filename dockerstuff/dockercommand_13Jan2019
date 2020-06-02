@@ -1,0 +1,334 @@
+  597  docker swarm init --advertise-addr 192.168.56.101
+  598  history | grep docker
+  601  docker ps -a
+  603  apt install docker -y
+  605  service docker restart
+  606  service docker status
+  607  systemctl docker status
+  608  systemctl status docker
+  610  service docker status
+  611  docker ps
+  612  apt install docker.io -y
+  614  service docker status
+  615  docker ps
+  617  docker service enable
+  618  service docker enable
+  619  service docker restart
+  622  docker swarm init --advertise-addr 192.168.56.101
+  624  docker node ls
+  625  docker service create -v data:/data -p 8000:80 --name websvc nginx
+  626  docker service -p 8000:80 --name websvc nginx
+  627  docker service create -p 8000:80 --name websvc nginx
+  628  docker search ubuntu
+  632  service docker restart
+  633  docker search ubuntu
+  635  systemctl restart docker
+  636  docker search ubuntu
+  642  systemctl restart docker
+  644  docker search ubuntu
+  645  docker pull ubuntu
+  652  systemctl restart docker
+  657  docker pull ubuntu
+  664  systemctl restart docker
+  665  docker pull ubuntu
+  666  docker images
+  668  history | grep docker service
+  671  docker service create -v data:/data -p 8000:80 --name websvc nginx
+  672  docker service create -p 8000:80 --name websvc nginx
+  673  docker node ls
+  674  docker ps -a
+  676  docker node ls -a
+  677  docker node ls
+  678  docker service create -p 8001:80 --name websvc nginx
+  680  docker ps -a
+  681  docker service ls
+  682  docker service stop ygywjxmayka2
+  683  docker service rm ygywjxmayka2
+  685  docker service create -p 8000:80 --name websvc nginx
+  686  docker service ls
+  687  docker service ps websvc
+  688  docker ps
+  689  docker service ps websvc
+  691  docker node ls
+  692  docker node update --availability drain manager
+  693  docker node update --availability drain puppetslave
+  694  docker node ls
+  695  docker service ps websvc
+  696  docker node update --availability active puppetmaster1
+  697  docker node update --availability active puppetmaster1.example.com
+  698  docker node ps websvc
+  699  docker service ps websvc
+  700  docker node update --availability active puppetmaster.example.com
+  701  docker service ps websvc
+  702  docker node update --availability drain puppetmaster.example.com
+  703  docker service ps websvc
+  704  docker node update --availability drain puppetmaster1.example.com
+  705  docker service ps websvc
+  706  docker node update --availability active puppetmaster1.example.com
+  707  docker node update --availability active puppetslave
+  708  docker node update --availability active puppetmaster.example.com
+  709  docker service ps
+  710  docker service ps websvc
+  711  docker node ls
+  713  docker service ps websvc
+  714  docker service scale websvc=10
+  715  docker service ps websvc
+  717  docker node update --availability drain puppetslave
+  718  docker service ps websvc
+  719  docker service ls
+  720  docker service ps websvc
+  721  docker service ps
+  722  docker service ps websvc
+  724  docker service ls
+  725  docker ps
+  726  docker node ls
+  727  docker service ps websvc
+  728  docker service ps websvc | grep -i running
+  730  docker service status
+  731  docker service inspect
+  732  docker service inspect puppetslave
+  736  docker node ls
+  737  docker attach kqktc82c6wrmho1ys9kmbzo1h
+  738  docker service attach kqktc82c6wrmho1ys9kmbzo1h
+  739  docker attach nrkoub8v8enjkjxzkcgfw6wnq
+  740  docker service attach nrkoub8v8enjkjxzkcgfw6wnq
+  745  docker service attach websvc
+  746  docker attach websvc
+  747  docker service ps websvc
+  749  docker service ps websvc | grep Running
+  750  docker container attach y79lsb3oxs2c
+  751  docker service attach y79lsb3oxs2c
+  752  docker attach y79lsb3oxs2c
+  753  docker node update --availability active puppetslave
+  754  docker node ls
+  756  docker service ps websvc | grep Running
+  757  docker node update --availability drain puppetmaster.example.com
+  758  docker service ps websvc | grep Running
+  759  docker service attach lezdbbru5hcn
+  760  docker attach lezdbbru5hcn
+  761  docker container attach 
+  762  docker container attach p9a7os2gz3hp
+  765  docker container ps -a
+  766  docker container ps
+  767  docker container attach 52c83fb39599
+  769  docker node update --availability active puppetmaster.example.com
+  770  docker service ps websvc
+  771  docker service ps websvc | grep Running
+  773  docker network ls
+  774  docker container exec puppetslave cat /etc/conf/nginx.conf
+  775  docker container exec websvc cat /etc/conf/nginx.conf
+  776  docker restart nginx
+  777  docker restart puppetslave
+  779  docker ps --filter name=websvc
+  780  docker attach websvc.9.x81kxdsqyqsnfoitf566ooisb
+  781  docker service ps websvc
+  783  docker service scale websvc=3
+  785  docker service ps websvc
+  786  docker service ps websvc | grep running
+  787  docker service ps websvc | grep Running
+  788  docker container ps
+  789  docker attach 7645ae622d4a
+  791  docker ps
+  792  docker exec -it websvc.3.wdilsnni5ukpu0ehsh4rwn7z6 bash
+  797  docker exec -it websvc.3.wdilsnni5ukpu0ehsh4rwn7z6 --name webserver bash
+  798  docker ps
+  799  docker exec -it websvc.3.og7ecddcm2xrizo71qvzywwxb --name mywebserver bash
+  800  docker exec -it websvc.3.og7ecddcm2xrizo71qvzywwxb  bash
+  801  docker service ls
+  802  docker service ps websvc
+  804  docker service ps websvc
+  805  docker service ps websvc | grep Shutdown
+  806  docker service remove b2zhhmwpmijt
+  807  docker container remove b2zhhmwpmijt
+  808  docker container rm b2zhhmwpmijt
+  810  docker service ps websvc | grep Shutdown
+  811  docker swarm update --task-history-limit 5
+  812  docker service ps websvc
+  813  docker swarm update --task-history-limit 1
+  814  docker service ps websvc
+  816  docker inspect websvc
+  820  docker node ls
+  821  docker service update --mount src=data,dst=data --name websvc
+  822  docker service update --help
+  839  docker service ps
+  840  docker service ps websvc
+  841  docker service ps websvc | grep Running
+  842  docker exec -it 5vhfblck8365 bash
+  843  docker exec -it 5vhfblck8365 p95cc89mrc7k
+  844  docker exec -it p95cc89mrc7k bash
+  847  docker ps
+  848  docker exec -it edcf5350e2a5 bash
+  863  docker service ps websvc
+  865  docker node update --availability drain puppetslave
+  866  docker service ps websvc
+  867  docker node update --availability drain puppetmaster1
+  868  docker node update --availability drain puppetmaster
+  869  docker node update --availability drain puppetmaster.example.com
+  870  docker service ps websvc
+  871  docker service ps websvc | grep running
+  872  docker service ps websvc | grep Running
+  873  docker node update --availability active puppetmaster.example.com
+  874  docker node update --availability active puppetslave
+  875  docker service ps websvc | grep Running
+  877  docker info
+  879  docker service ls
+  889  vim docker_swarm.sh
+  898  ./docker_swarm.sh 
+  904  docker service ps websvc
+  905  docker service ls
+  906  docker node ls
+  913  vim dockerfile
+  921  vim dockerfile
+  922  cp dockerfile Dockerfile
+  926  docker search tomcat
+  930  docker build -f Dockerfile -t addressbook .
+  931  docker images
+  952  docker service ps websvc
+  953  docker service ps
+  954  docker service ls
+  955  docker node ls
+  957  docker node update --availability drain puppetslave
+  961  docker node ls
+  962  docker service ps websvc
+  965  rm dockerfile 
+  977  docker build -f Dockerfile -t addressbook_nginx .
+  978  docker images
+  981  docker build -f Dockerfile -t addressbook . --name addressbook_nginx --tag:latest
+  982  docker images
+  983  docker restart nginx
+  984  docker build -f Dockerfile -t addressbook_nginx . -name addressbook_nginx -tag:latest
+  985  docker build -f Dockerfile -t addressbook_nginx . -n addressbook_nginx -t:latest
+  986  docker build --help
+  987  docker build -f Dockerfile -t addressbook_nginx .
+  988  docker images
+  989  docker rmi 56d09a385626
+  990  docker rmi f33cbc3e77d8
+  991  docker images
+  999  docker build -f Dockerfile -t addressbook.war:latest .
+ 1010  docker build -f Dockerfile -t addressbook_nginx .
+ 1012  docker build -f Dockerfile -t addressbook_nginx .
+ 1015  docker images
+ 1016  docker rmi 28d8a2cd2eab ed53cf4bbc95
+ 1020  docker build -f Dockerfile -t addressbook .
+ 1036  service docker status
+ 1037  service docker stop
+ 1038  service docker status
+ 1061  systemctl docker stop
+ 1062  service docker status
+ 1201  service docker stop
+ 1662  history | grep docker
+ 1664  docker ps
+ 1665  docker ps -a
+ 1668  mkdir dockerstuff
+ 1669  cd dockerstuff
+ 1684  history | get dockerhub
+ 1685  history | grep dockerhub
+ 1688  docker build -d deepchaudhary/simpleweb:latest .
+ 1689  docker build -t deepchaudhary/simpleweb:latest .
+ 1718  service docker restart
+ 1719  docker search hello-world
+ 1720  cd dockerstuff/
+ 1723  docker build -t deepchaudary/simpleweb .
+ 1724  docker images
+ 1726  docker run -p 8080:8080 deepchaudhary/simpleweb
+ 1727  docker images
+ 1728  docker run -p 8080:8080 deepchaudary/simpleweb
+ 1729  docker run -p 5000:8080 deepchaudary/simpleweb
+ 1730  docker ps
+ 1731  docker run -p 5000:8080 deepchaudary/simpleweb
+ 1736  docker run -p 5000:8080 deepchaudary/simpleweb
+ 1757  docker
+ 1759  history | grep docker
+ 1761  docker images
+ 1763  docker history
+ 1764  docker images
+ 1803  docker service ls
+ 1804  docker node ls
+ 1805  docker node update --availability drain puppetslave
+ 1806  docker node ls
+ 1807  docker service ls
+ 1808  docker stack service vote
+ 1809  docker stack service vote_vote
+ 1811  docker stack service vote
+ 1812  docker service ps vote_vote
+ 1813  docker node update --availability active puppetslave
+ 1814  docker service ls
+ 1815  docker service ps vote_vote
+ 1816  docker service ls
+ 1817  docker service ps
+ 1818  docker container ps
+ 1819  docker container stop 3350501ab01e e49d3813aa8a
+ 1820  docker service ls
+ 1821  docker service stop vote_vote
+ 1822  docker service ls
+ 1823  docker container ps -a
+ 1824  docker container start 3350501ab01e e49d3813aa8a
+ 1825  docker service ls
+ 1826  docker service start vs3ieig2rnnl
+ 1827  docker service update vs3ieig2rnnl
+ 1828  docker service ls
+ 1829  docker service update q4nd7qdc5pap
+ 1830  docker service ls
+ 1831  docker service update vote_visualize -p 5003
+ 1832  docker service update vote_visualize -p 5003:8080
+ 1833  docker service update vote_visualize --args -p 5003:8080
+ 1834  docker service update vote_visualize --args -p 5003
+ 1835  docker service inspect vote_visualizer
+ 1836  docker stack
+ 1837  docker stack ls
+ 1838  docker stack ls vote_vote
+ 1839  docker stack ps vote_vote
+ 1840  docker stack ps vote
+ 1841  docker secret create psql_usr psql_usr.txt
+ 1842  cd dockerstuff/
+ 1847  docker secret create psql_usr psql_usr.txt
+ 1848  echo "myDBpassWORD" | docker secret create psql_pass - TAB COMPLETION
+ 1849  docker secret create psql_usr psql_usr.txt
+ 1850  docker secret ls
+ 1851  docker secret create psql_usr psql_use1.txt
+ 1852  docker-compose ll
+ 1853  docker service ls
+ 1854  docker service update --publish-rm 8080 --publish-add 5003
+ 1855  docker service update --publish-rm 8080
+ 1856  docker service update --publish-rm 8080 --publish-add 5003 vote_visualizer
+ 1857  docker inspect vote_visualizer
+ 1858  docker service ls
+ 1866  docker service ls
+ 1867  docker service ps vote_visualizer
+ 1868  docker service node ls
+ 1869  docker  node ls
+ 1870  docker service update --availability drain puppetslave
+ 1871  docker node update --availability drain puppetslave
+ 1872  docker service ls
+ 1873  docker node update --availability active puppetslave
+ 1874  docker service ls
+ 1876  history | grep docker
+ 1878  history | grep docker >> ~/dockerstuff/dockercommands_12Jan2019
+ 1880  history | grep docker
+ 1881  cd dockerstuff/
+ 1883  history | grep docker
+ 1886  history | grep docker-stack
+ 1888  history | grep docker-compose.yml
+ 1889  history | grep 'docker-compose.yml'
+ 1890  history | grep docker
+ 1891  docker service ls
+ 1936  cd dockerstuff/
+ 1941  cat docker-compose.yml 
+ 1956  cat dockercommands_12Jan2019 
+ 1960  cd dockerstuff/
+ 1964  cat docker-compose.yml 
+ 1975  cd dockerstuff/
+ 1979  wc docker-compose.yml 
+ 1980  wc -l docker-compose.yml 
+ 1981  wc -l docker-compose.yml | awk '{print $1}'
+ 1982  wc docker-compose.yml | awk '{print $1}'
+ 1983  wc docker-compose.yml | awk '{print $2}'
+ 1984  wc docker-compose.yml | awk '{print $2}3
+ 1985  wc docker-compose.yml | awk '{print $3}
+ 1987  wc docker-compose.yml | awk '{print $4}
+ 1989  wc docker-compose.yml | awk '{print $3}'
+ 2154  docker service ps
+ 2155  docker service ls
+ 2156  docker node --availability drain puppetslave
+ 2157  docker node update --availability drain puppetslave
+ 2160  history | grep docker >> dockercommand_13Jan2019

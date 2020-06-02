@@ -1,0 +1,123 @@
+  462  root@puppetslave:~/repo/projects# mv
+  693  docker node update --availability drain puppetslave
+  696  docker node update --availability active puppetmaster1
+  697  docker node update --availability active puppetmaster1.example.com
+  700  docker node update --availability active puppetmaster.example.com
+  702  docker node update --availability drain puppetmaster.example.com
+  704  docker node update --availability drain puppetmaster1.example.com
+  706  docker node update --availability active puppetmaster1.example.com
+  707  docker node update --availability active puppetslave
+  708  docker node update --availability active puppetmaster.example.com
+  717  docker node update --availability drain puppetslave
+  732  docker service inspect puppetslave
+  753  docker node update --availability active puppetslave
+  757  docker node update --availability drain puppetmaster.example.com
+  769  docker node update --availability active puppetmaster.example.com
+  774  docker container exec puppetslave cat /etc/conf/nginx.conf
+  777  docker restart puppetslave
+  865  docker node update --availability drain puppetslave
+  867  docker node update --availability drain puppetmaster1
+  868  docker node update --availability drain puppetmaster
+  869  docker node update --availability drain puppetmaster.example.com
+  873  docker node update --availability active puppetmaster.example.com
+  874  docker node update --availability active puppetslave
+  957  docker node update --availability drain puppetslave
+ 1025  hostnamectl set-hostname puppetslave
+ 1028  wget https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb
+ 1029  dpkg -i puppetlabs-release-pc1-xenial.deb
+ 1031  apt-get install puppetserver -y
+ 1032  vim /etc/default/puppetserver
+ 1033  systemctl enable puppetserver
+ 1034  systemctl start puppetserver
+ 1039  systemctl start puppetserver
+ 1040  journalctl -u puppetserver
+ 1041  ll /opt/puppetlabs/server/apps/puppetserver/bin/puppetserver 
+ 1048  locate puppetserver.service
+ 1051  puppetserver
+ 1052  puppet
+ 1053  puppetserver --version
+ 1054  vim /etc/default/puppetserver
+ 1085  service puppetserver start
+ 1086  vim /etc/default/puppetserver 
+ 1087  service puppetserver start
+ 1089  journalctl -u puppetserver
+ 1095  getent passwd puppet
+ 1096  service puppetserver start
+ 1104  service puppetserver stat
+ 1105  service puppetserver start
+ 1108  locate puppetmaster.log
+ 1109  locate puppet.log
+ 1110  service puppetserver enable
+ 1113  service puppetserver start
+ 1114  ls -alh /etc/puppetlabs/puppet/ssl
+ 1116  apt-instal purge puppet*
+ 1117  apt purge puppet
+ 1118  apt purge puppetserver
+ 1120  apt remove puppet*
+ 1121  apt remove puppet
+ 1124  apt list --installed | grep puppet
+ 1126  apt list --installed | grep puppet
+ 1127  apt purge puppet-agent
+ 1128  apt list --installed | grep puppet
+ 1130  apt list --installed | grep puppet
+ 1131  apt purge puppet-release
+ 1132  apt list --installed | grep puppet
+ 1133  apt purge puppetlabs-release-pc1
+ 1134  apt list --installed | grep puppet
+ 1136  apt list --installed | grep puppet
+ 1138  wget https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb
+ 1140  dpkg -i puppetlabs-release-pc1-xenial.deb
+ 1142  apt-get install puppetserver -y
+ 1144  vim /etc/default/puppetserver 
+ 1146  systemctl start puppetserver
+ 1147  systemctl enable puppetserver
+ 1148  systemctl status puppetserever
+ 1149  systemctl status puppetserver
+ 1150  puppetserver --version
+ 1151  puppet --version
+ 1152  puppet
+ 1155  vim /etc/puppetlabs/puppet/puppet.conf 
+ 1158  ping puppetmaster.example.com
+ 1169  ping puppetmaster.example.com
+ 1171  wget https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb
+ 1174  apt-install -y puppet-agent
+ 1175  apt install -y puppet-agent
+ 1176  apt-get purge puppet-agent
+ 1182  hostnamectl set-hostname puppetslave.example.com
+ 1185  service status puppetserver
+ 1186  service puppetserver status
+ 1188  systemctl status puppetserver
+ 1189  service start puppetserver
+ 1190  service puppetserver start
+ 1206  service puppetserver start
+ 1207  service puppetserver status
+ 1208  puppet cert list
+ 1209  puppet cert sign puppetmaster.example.com
+ 1211  cd /etc/puppetlabs/code/environments/production/
+ 1218  puppet parser validate site.pp
+ 1220  puppet parser validate site.pp
+ 1222  puppet parser validate site.pp
+ 1224  puppet parser validate site.pp
+ 1227  cd /etc/puppetlabs/code/environments/production/manifests/
+ 1235  puppet parser validate site.pp
+ 1236  puppet parser validate init.pp
+ 1241  puppet parser validate site.pp
+ 1244  cd /etc/puppetlabs/
+ 1256  puppet parser validate site.pp
+ 1258  puppet parser validate site.pp
+ 1260  puppet parser validate site.pp
+ 1263  puppet parser validate site.pp
+ 1265  puppet parser validate site.pp
+ 1272  cd /etc/puppetlabs/
+ 1275  cd puppet
+ 1277  cat puppet.conf 
+ 1297  puppet module generate deepak-mediawiki --environment production
+ 1306  puppet parser validate init.pp
+ 1317  puppet parser validate site.pp
+ 1319  puppet parser validate site.pp
+ 1322  pupppet module install puppetlabs-apache
+ 1323  puppet module install puppetlabs-apache
+ 1324  puppet module install puppetlabs-mysql
+ 1360  service puppet status
+ 1368  history | grep puppet
+ 1370  history | grep puppet >> puppetinfo.txt

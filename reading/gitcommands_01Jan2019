@@ -1,0 +1,53 @@
+ 1360  history | grep git
+ 1366  git clone https://github.com/deepedureka/jenkinspipeline.git
+ 1374  git add -a
+ 1375  git status
+ 1376  git add -A
+ 1377  git commit -m "JenkinsFile for packaging"
+ 1378  git status
+ 1380  git remote -v
+ 1381  git push origin master
+ 1385  git commit -m
+ 1386  git commit -m "Updated jenkinsfile1"
+ 1387  git commit -a -m "Updated jenkinsfile1"
+ 1388  git status
+ 1389  git push origin master
+ 1391  git commit -a -m "Updated jenkinsfile1"
+ 1392  git push origin master
+ 1394  git commit -a -m "Updated jenkinsfile1"
+ 1395  git push origin master -u deepedureka -p Chevron@01
+ 1396  git push origin master -u deepedureka
+ 1397  git push origin master
+ 1399  git commit -a -m "Updated jenkinsfile1"
+ 1400  git push origin master
+ 1435  git commit -a -m "Revised JenkinsFile1"
+ 1436  git push origin master
+ 1602  git -a commit -m "last update jenkinsfile"
+ 1603  git add -a
+ 1604  git add -A
+ 1605  git commit -m "last refined commit"
+ 1606  git push origin master
+ 1608  git commit -A -m "last refined commit"
+ 1609  git commit -a -m "last refined commit"
+ 1610  git push origin master
+ 1612  git commit -a -m "last refined commit"
+ 1613  git push origin master
+ 1631  git commit -A -m "JenkinsFile2 commit for deploy to Prod"
+ 1632  git commit -a -m "JenkinsFile2 commit for deploy to Prod"
+ 1633  git status
+ 1634  git add -a
+ 1635  git add -A
+ 1636  git commit  -m "JenkinsFile2 commit for deploy to Prod"
+ 1637  git push origin master
+ 1641  git add -a
+ 1642  git add -A
+ 1643  git commit  -m "JenkinsFile2 commit for deploy to Prod"
+ 1644  git push origin master
+ 1654  git add -A
+ 1655  git commit -m "JenkinsFile3 for fully Automated deployment"
+ 1656  git push origin master
+ 1658  git add -A
+ 1659  git commit -m "JenkinsFile3 for fully Automated deployment"
+ 1660  git push origin master
+ 1663  history | grep git
+ 1665  history | grep git >> gitcommands_01Jan2019
