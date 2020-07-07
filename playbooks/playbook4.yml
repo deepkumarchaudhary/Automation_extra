@@ -1,0 +1,19 @@
+---
+- hosts: webservers
+  become: true
+  become_user: root
+  vars:
+   src_path: /etc/ansible/
+   dest_path: /var/www/html
+  tasks:
+  - name: install apache2 package
+    apt: name=apache2 state=present
+  - name: Start httpd service
+    service: name=apache2 state=started
+  - name: Deploy File
+    copy: src={{src_path}}/index.html dest={{dest_path}}
+    notify: restart apache2
+  handlers:
+  - name: restart apache2
+    service: name=apache2 state=restarted
+ 

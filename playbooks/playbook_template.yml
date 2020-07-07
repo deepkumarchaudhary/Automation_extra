@@ -1,0 +1,11 @@
+---
+- hosts: webservers
+  vars:
+    variable_to_be_replaced: 'Hello world'
+    inline_variable: 'hello again'
+  tasks:
+   - name: Ansible Template Example
+     template:
+      src: /playbooks/hello_world.j2
+      dest: /root/reading/hello_world.txt
+      mode: 0655

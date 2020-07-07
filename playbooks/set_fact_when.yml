@@ -1,0 +1,25 @@
+---
+- hosts: webservers
+  become: true
+  become_user: root
+  vars:
+   host_name: "{{ ansible_distribution | upper }}" 
+  tasks:  
+   - name: Set our installable path for CentOs 
+     set_fact:
+      webserver_application_port: 80
+      webserver_application_path: /usr/share/www
+      webserver_application_user: root
+     when: host_name == 'CENTOS'
+
+   - name: Set our installable path for Ubuntu
+     set_fact:
+      webserver_application_port: 8080
+      webserver_application_path: /var/www
+      webserver_application_user: nginx
+     when: host_name == 'UBUNTU'
+  
+   - name: Show a fact
+     debug:     
+      msg: "application port: {{ webserver_application_port }} application path: {{ webserver_application_path }} application user: {{ webserver_application_user }}"
+

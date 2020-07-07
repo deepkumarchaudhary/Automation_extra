@@ -1,0 +1,10 @@
+---
+- hosts: webservers
+  vars:
+    list: ['first item', 'second item', 'third item']
+  tasks:
+   - name: Ansible Template Loop Example
+     template:
+      src: /playbooks/templates_example.j2
+      dest: /root/reading/templates_example.txt
+      mode: 0655

@@ -1,0 +1,11 @@
+---
+- hosts: webservers
+  become: true
+  become_user: root
+  vars:
+   var_time: "Var: {{lookup('pipe', 'date \"+%H:%M:%S\"')}}"  
+  tasks:
+       - debug: var=var_time
+       - command: sleep 2
+       - debug: var=var_time
+
