@@ -1,6 +1,6 @@
   172  apt-add-repository ppa:ansible/ansible
   174  apt-get install -y ansible
-  175  vim /etc/ansible/hosts 
+  175  vim /etc/ansible/hosts
   176  service ansible restart
   182  ansible -m ping webservers
   183  ansible -m ping 192.168.56.101
@@ -29,7 +29,7 @@
   229  ansible webservers -m setup -a "ansible_users"
   230  ansible webservers -m setup -a "ansible_user"
   231  ansible webservers -m setup -a "filter=ansible_user"
-  243  ansible-playbook playbook1.yml 
+  243  ansible-playbook playbook1.yml
   244  ansible-playbook playbook1.yml --syntax-check
   247  ansible-playbook playbook1.yml --syntax-check
   249  ansible-playbook playbook1.yml --syntax-check
@@ -39,22 +39,22 @@
   268  ansible-playbook playbook2.yml --syntax-check
   269  ansible-playbook playbook2.yml
   273  ansible-playbook playbook3.yml --syntax-check
-  283  ansible-playbook playbook3.yml 
+  283  ansible-playbook playbook3.yml
   285  ansible-playbook playbook3.yml
   288  ansible-playbook playbook3.yml --syntax-check
   290  ansible-playbook playbook3.yml --syntax-check
-  291  ansible-playbook playbook3.yml 
+  291  ansible-playbook playbook3.yml
   294  ansible-playbook playbook4.yml --syntax-check
   296  cp /var/www/html/index.html /etc/ansible/
   298  cd /etc/ansible/
-  302  ansible-playbook playbook4.yml 
+  302  ansible-playbook playbook4.yml
   304  ansible-playbook playbook4.yml
   310  cd /etc/ansible/
   335  cp /etc/ansible/sample.war /etc/ansible/roles/tomcat/files/
   340  cd /etc/ansible/roles/
   345  ansible-playbook /playbooks/site.yml --syntax-check
   355  ansible-playbook /playbooks/site.yml --syntax-check
-  357  ansible-playbook site.yml 
+  357  ansible-playbook site.yml
   359  cd /etc/ansible/
   396  ansible-playbook /playbooks/site.yml
   398  ansible-playbook /playbooks/site.yml
@@ -66,7 +66,7 @@
   416  history | grep ansible
   417  cd /etc/ansible/
   421  history | grep ansible >> ansibleCommand.txt
-  425  more ansibleCommand.txt 
-  435  cat ansibleCommand.txt 
+  425  more ansibleCommand.txt
+  435  cat ansibleCommand.txt
   664  history | grep ansible
   665  history | grep ansible >> ansiblecommandexample_09Dec2018
